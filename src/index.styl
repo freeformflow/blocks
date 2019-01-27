@@ -1,0 +1,63 @@
+@import "//cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css"
+
+@require "_helpers"
+
+@import url(google-font("Righteous"))
+@import url(google-font("Lato"))
+
+body
+  display flex
+  flex-flow column nowrap
+  padding 2rem
+
+  h1
+    font-family "Righteous", sans-serif
+    color #38a
+    letter-spacing 1.5
+    text-transform uppercase
+    margin-bottom 0
+
+  p
+    font-family "Lato"
+
+  main
+    display flex
+    flex-flow column
+    flex 1 1 0
+
+    & > x-tabs
+      display flex
+      flex-flow column
+      flex 1 1 0
+      font-size 12pt
+      margin-right 2rem
+      padding 1rem
+      border 1px solid silver
+
+      #labels
+        display block
+        padding-bottom 0.7rem
+
+        & > label
+          display inline-block
+          padding 0.5 1rem 0 0
+          font-family sans-serif
+          font-size 0.7rem
+          line-height 1rem
+          letter-spacing 1.2
+          color silver
+          text-transform uppercase
+          cursor pointer
+
+          &.selected
+            color gray
+
+          &:last-of-type
+            padding-right 0
+
+      & > :not(.selected)
+        display none
+
+      .content
+        display flex
+        flex-flow column
